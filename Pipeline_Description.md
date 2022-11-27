@@ -6,7 +6,6 @@ Following, is the data pipeline diagram, highlighting the tools and technologies
 
 ![Data Pipeline](./images/data_pipeline.jpg "a title")
 
-
 ## 1. Pipeline Platform
 
 The present pipeline was built in the Google Cloud Platform (GCP), and we present some of the reasons to choose it.
