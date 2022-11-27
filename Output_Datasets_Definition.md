@@ -11,6 +11,7 @@ We define as output one dataset per category
 Schema definition:
 
 root
+
  |-- VendorID: integer (nullable = true)
  
  |-- tpep_pickup_datetime: timestamp (nullable = true)
@@ -62,6 +63,7 @@ root
 Schema definition:
 
 root
+
  |-- VendorID: integer (nullable = true)
  
  |-- lpep_pickup_datetime: timestamp (nullable = true)
@@ -115,6 +117,7 @@ root
 Schema definition:
 
 root
+
  |-- dispatching_base_num: string (nullable = true)
  
  |-- pickup_datetime: timestamp (nullable = true)
@@ -142,6 +145,7 @@ root
 Schema definition:
 
 root
+
  |-- hvfhs_license_num: string (nullable = true)
 
  |-- dispatching_base_num: string (nullable = true)
