@@ -1,7 +1,5 @@
 # Pipeline Instructions
 
-<em>Obs.: Code available on notebooks</em>  
-
 In this file, we will cover the instructions in order to set up the pipeline.
 
 ## Step 1. Create a Google Cloud Project
@@ -79,9 +77,25 @@ hive_partition_uri_prefix = 'gs://mobilab-tech-task-bucket/outputs/green_trip/pa
 require_hive_partition_filter = false);
 ~~~~
 
+7.3 Run the following query to create a new BigQuery table for the FHVHV Trip data:
+
+~~~~
+CREATE EXTERNAL TABLE mobilab-tech-task.dataset_tlc_nyc.fhvhv_trip
+WITH PARTITION COLUMNS
+OPTIONS (
+format = 'PARQUET',
+uris = ['gs://mobilab-tech-task-bucket/outputs/fhvhv/parquet/*'],
+hive_partition_uri_prefix = 'gs://mobilab-tech-task-bucket/outputs/fhvhv/parquet',
+require_hive_partition_filter = false);
+~~~~
+
 7.3 After, you will end with a structure similar to this this
 
 ![6](./images/bigquery.PNG "bigquery")
+
+**Obs.:** Inside the BigQuery, you and your Data Science team could easily query the data in a very fast and efficient colum-oriented database
+
+![7](./images/exampleBigQuery.PNG "bigquery example")
 
 ## You are end with the pipeline!
 

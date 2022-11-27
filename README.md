@@ -12,8 +12,10 @@ The repository contain the following deliverables:
 
 **Markdown Files**
 1. Description and definition of single steps of the pipeline
-2. Definition of ouput datasets (schema)
-3. Instructions on how to run and deploy the pipeline
+2. Instructions on how to run and deploy the pipeline
+3. Definition of ouput datasets (schema)
+4. Future steps
+5. Bonus (optional Tasks)
 
 **Folders**
 1. Python Notebooks with pipeline transformation code
