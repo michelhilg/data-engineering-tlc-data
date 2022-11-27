@@ -2,6 +2,11 @@
 
 <em>Obs.: Code available on notebooks</em>  
 
+Following, is the data pipeline diagram, highlighting the tools and technologies implemented:
+
+![Data Pipeline](./images/data_pipeline.jpg "a title")
+
+
 ## 1. Pipeline Platform
 
 The present pipeline was built in the Google Cloud Platform (GCP), and we present some of the reasons to choose it.
@@ -64,22 +69,46 @@ The selection of Jupyter is based on the facility to visualize operations and qu
 Inside the Dataproc cluster, we run Hadoop version 3.2, and Spark 3.1, in a Debian 10 system.
 
 
-### 2.3.3. Transformation Methods
+#### 2.3.3. Transformation Methods
 
-Using the Jupyter with PySpark environment, we applied some general transformation to the datasets. Checking for inconsistency in the data format, filtering columns, and dropping invalide rows values.
+Using Jupyter with PySpark environment, we applied some general transformations to the datasets. Checking for inconsistency in the data format, filtering columns, and dropping invalid rows values.
 
-In order to assess the data, the data dictionaries provide by TLC NYC Trip data were very usefull.
+In order to assess the data, the data dictionaries provided by TLC NYC Trip data were very useful.
 
-Each transformation method applied in each dataset is better described in the Jupyter Notebooks files (please check them). As weel, the final schema for each data category could be check in their markdown file.
+Each transformation method applied in each dataset is better described in the Jupyter Notebooks files (please check them). As well, the final schema for each data category could be checked in their markdown file.
 
-## 2.4 Load Data
+### 2.4. Load Data
 
 To load the data, writing from the Jupyter Notebooks, we must have to meet the Data Science team requirements:
 
 - Colum-oriented dataset in a Delta Lake format
 - Row-oriented dataset
 
-### 2.4.1 
+### 2.4.1 Output Folders - Google Cloud Storage (GCS)
+
+Regardless of the data format, the first step in the load process will be to export the transformed dataset to the Google Cloud Storage (GSC) service.
+
+Since we are running the transformation inside the GCP, this step is easily implemented by using the `gsutil` library. We organize the output folder in a similar way as the input, one folder per category, but now also one subfolder per oriented type.
+
+#### 2.4.2. Colum-oriented Format
+
+Running the PySpark inside the Dataproc cluster on GCP, we had problems with the Delta Lake installation, leading to issues when saving the data in a Delta Table format.
+
+To workaround this situation, we select a column-oriented database tool on GCP, Google BigQuery. Unfortunately, we also run with problems saving the FHV and the Yellow Trip dataset in this format, only achieving good results for the Green Trip and the FHVHV datasets.
+
+#### 2.4.3. Google BigQuery
+
+With Google BigQuery, we achieve were able to import data from the Google Cloud Storage inside a Big Query Table, where the Data Science team could quickly run queries.
+
+#### 2.4.4. Row-oriented Format
+
+We face the same saving problem here, to save the output in a row-oriented database we select the `.csv` format after importing into a SQL DBMS, such as MySQL, PostgreSQL, or even Google Cloud SQL. But, unfortunately, a versioning problem only allowed us to save the Green Trip and the FHVHV datasets.
+
+#### 2.4.3. Google Cloud Storage & Google BigQuery
+
+Facing these challanges, we select the Goog,r, we achieve the result of automatically importing data from the Google Cloud Storage inside a Big Query Table, where the Data Science team could quickly run queries.
+
+
 
 
 
