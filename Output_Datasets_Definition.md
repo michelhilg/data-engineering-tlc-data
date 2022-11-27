@@ -12,27 +12,49 @@ Schema definition:
 
 root
  |-- VendorID: integer (nullable = true)
+ 
  |-- tpep_pickup_datetime: timestamp (nullable = true)
+ 
  |-- tpep_dropoff_datetime: timestamp (nullable = true)
+ 
  |-- passenger_count: integer (nullable = true)
+ 
  |-- trip_distance: double (nullable = true)
+ 
  |-- RatecodeID: double (nullable = true)
+ 
  |-- store_and_fwd_flag: string (nullable = true)
+ 
  |-- PULocationID: long (nullable = true)
+ 
  |-- DOLocationID: long (nullable = true)
+ 
  |-- payment_type: integer (nullable = true)
+ 
  |-- fare_amount: double (nullable = true)
+ 
  |-- extra: double (nullable = true)
+ 
  |-- mta_tax: double (nullable = true)
+ 
  |-- tip_amount: double (nullable = true)
+ 
  |-- tolls_amount: double (nullable = true)
+ 
  |-- improvement_surcharge: double (nullable = true)
+ 
  |-- total_amount: double (nullable = true)
+ 
  |-- congestion_surcharge: double (nullable = true)
+ 
  |-- airport_fee: integer (nullable = true)
+ 
  |-- tpep_pickup_hour: integer (nullable = true)
+ 
  |-- tpep_dropoff_hour: integer (nullable = true)
+ 
  |-- pickup_day: string (nullable = true)
+ 
  |-- dropoff_day: string (nullable = true)
 
 ## 2. Green Taxi Trip Records
@@ -41,28 +63,51 @@ Schema definition:
 
 root
  |-- VendorID: integer (nullable = true)
+ 
  |-- lpep_pickup_datetime: timestamp (nullable = true)
+ 
  |-- lpep_dropoff_datetime: timestamp (nullable = true)
+ 
  |-- store_and_fwd_flag: string (nullable = true)
+ 
  |-- RatecodeID: double (nullable = true)
+ 
  |-- PULocationID: long (nullable = true)
+ 
  |-- DOLocationID: long (nullable = true)
+ 
  |-- passenger_count: integer (nullable = true)
+ 
  |-- trip_distance: double (nullable = true)
+ 
  |-- fare_amount: double (nullable = true)
+ 
  |-- extra: double (nullable = true)
+ 
  |-- mta_tax: double (nullable = true)
+ 
  |-- tip_amount: double (nullable = true)
+ 
  |-- tolls_amount: double (nullable = true)
+ 
  |-- ehail_fee: integer (nullable = true)
+ 
  |-- improvement_surcharge: double (nullable = true)
+ 
  |-- total_amount: double (nullable = true)
+ 
  |-- payment_type: integer (nullable = true)
+ 
  |-- trip_type: integer (nullable = true)
+ 
  |-- congestion_surcharge: double (nullable = true)
+ 
  |-- lpep_pickup_hour: integer (nullable = true)
+ 
  |-- lpep_dropoff_hour: integer (nullable = true)
+ 
  |-- pickup_day: string (nullable = true)
+ 
  |-- dropoff_day: string (nullable = true)
 
 ## 3. For-Hire Vehicle Trip Records (FHV)
@@ -71,15 +116,25 @@ Schema definition:
 
 root
  |-- dispatching_base_num: string (nullable = true)
+ 
  |-- pickup_datetime: timestamp (nullable = true)
+ 
  |-- dropOff_datetime: timestamp (nullable = true)
+ 
  |-- PUlocationID: double (nullable = true)
+ 
  |-- DOlocationID: double (nullable = true)
+ 
  |-- SR_Flag: integer (nullable = true)
+ 
  |-- Affiliated_base_number: string (nullable = true)
+ 
  |-- pickup_hour: integer (nullable = true)
+ 
  |-- dropOff_hour: integer (nullable = true)
+ 
  |-- pickup_day: string (nullable = true)
+ 
  |-- dropoff_day: string (nullable = true)
 
 ## 4. High Volume For-Hire Vehicle Trip Records (FHVHV)
