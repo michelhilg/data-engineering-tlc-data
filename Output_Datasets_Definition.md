@@ -88,32 +88,59 @@ Schema definition:
 
 root
  |-- hvfhs_license_num: string (nullable = true)
+
  |-- dispatching_base_num: string (nullable = true)
+
  |-- originating_base_num: string (nullable = true)
+
  |-- request_datetime: timestamp (nullable = true)
+
  |-- on_scene_datetime: timestamp (nullable = true)
+
  |-- pickup_datetime: timestamp (nullable = true)
+
  |-- dropoff_datetime: timestamp (nullable = true)
+
  |-- PULocationID: long (nullable = true)
+
  |-- DOLocationID: long (nullable = true)
+ 
  |-- trip_miles: double (nullable = true)
+
  |-- trip_time: long (nullable = true)
+
  |-- base_passenger_fare: double (nullable = true)
+
  |-- tolls: double (nullable = true)
+
  |-- bcf: double (nullable = true)
+
  |-- sales_tax: double (nullable = true)
+
  |-- congestion_surcharge: double (nullable = true)
+
  |-- airport_fee: double (nullable = true)
+
  |-- tips: double (nullable = true)
+
  |-- driver_pay: double (nullable = true)
+
  |-- shared_request_flag: string (nullable = true)
+
  |-- shared_match_flag: string (nullable = true)
+
  |-- access_a_ride_flag: string (nullable = true)
+ 
  |-- wav_request_flag: string (nullable = true)
+ 
  |-- wav_match_flag: string (nullable = true)
+ 
  |-- pickup_hour: integer (nullable = true)
+ 
  |-- dropoff_hour: integer (nullable = true)
+ 
  |-- pickup_day: string (nullable = true)
+ 
  |-- dropoff_day: string (nullable = true)
 
 
