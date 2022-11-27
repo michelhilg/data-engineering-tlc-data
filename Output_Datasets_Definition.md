@@ -2,9 +2,17 @@
 
 <em>Obs.: Code available on notebooks</em>  
 
-In this markdown, we will define the schema - with data type, and names - for the outputs datasets.
+In this markdown, we will define the schema - with the data type, and names - for the output datasets.
 
-We define as output one dataset per category
+We define as output one dataset per category, i.e., in the end, we will have: yellow taxi, green taxi, he, and fhvhv datasets.
+
+Answering the question of the task:
+
+<em>The input data is spread over several files, including separate files for “Yellow” and “Green” taxis. Does it make sense to merge those input files into one dataset?</em>
+
+It is better to keep than separate, in order to preserve the schema for each dataset, even if they are very similar. To perform further analysis with both, a `join` operation could be applied.
+
+
 
 ## 1. Yellow Taxi Trip Records
 
@@ -57,6 +65,8 @@ root
  |-- pickup_day: string (nullable = true)
  
  |-- dropoff_day: string (nullable = true)
+
+
 
 ## 2. Green Taxi Trip Records
 
@@ -112,6 +122,8 @@ root
  
  |-- dropoff_day: string (nullable = true)
 
+
+
 ## 3. For-Hire Vehicle Trip Records (FHV)
 
 Schema definition:
@@ -139,6 +151,8 @@ root
  |-- pickup_day: string (nullable = true)
  
  |-- dropoff_day: string (nullable = true)
+
+
 
 ## 4. High Volume For-Hire Vehicle Trip Records (FHVHV)
 
