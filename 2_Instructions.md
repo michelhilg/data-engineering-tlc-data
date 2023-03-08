@@ -4,14 +4,15 @@ In this file, we will cover the instructions in order to set up the pipeline.
 
 ## Step 1. Create a Google Cloud Project
 
-1.1 In your Google Cloud Account, start a new project.
+- 1.1 In your Google Cloud Account, start a new project.
 
 ![1](./images/project.PNG "Google Cloud Project")
 
 ## Step 2. Set up a VM Instance Inside GCP
 
-2.1 Inside this Google Project, go to Compute Engine.
-2.2. Click on create an instance and fill the fields properly.
+- 2.1 Inside this Google Project, go to Compute Engine.
+
+- 2.2 Click on create an instance and fill the fields properly.
 
 ![2](./images/VmInstance.PNG "VM Instance")
 
