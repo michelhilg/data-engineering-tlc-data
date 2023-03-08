@@ -1,7 +1,5 @@
 # Pipeline Description
 
-<em>Obs.: Code available on notebooks</em>  
-
 Following, is the data pipeline diagram, highlighting the tools and technologies implemented:
 
 ![Data Pipeline](./images/data_pipeline.jpg "a title")
@@ -40,7 +38,7 @@ In this step, we select the Google Cloud Storage (GCS) tool, a web service from 
 
 We structure the data in folders by category, as follows:
 
-├── mobilab-tech-task-bucket
+├── tlc-data
 
 │   ├── yellow-taxi
 

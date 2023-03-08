@@ -23,7 +23,7 @@ In this file, we will cover the instructions in order to set up the pipeline.
 
 3.2 The new bucket must have the following structure:
 
-├── mobilab-tech-task-bucket
+├── tlc-data
 
 │   ├── yellow-taxi
 
@@ -68,24 +68,24 @@ In this file, we will cover the instructions in order to set up the pipeline.
 7.2 Run the following query to create a new BigQuery table for the Green Taxi Trip data:
 
 ~~~~
-CREATE EXTERNAL TABLE mobilab-tech-task.dataset_tlc_nyc.green_trip``
+CREATE EXTERNAL TABLE tlc-data.dataset_tlc_nyc.green_trip``
 WITH PARTITION COLUMNS
 OPTIONS (
 format = 'PARQUET',
-uris = ['gs://mobilab-tech-task-bucket/outputs/green_trip/parquet/*'],
-hive_partition_uri_prefix = 'gs://mobilab-tech-task-bucket/outputs/green_trip/parquet',
+uris = ['gs://tlc-data-bucket/outputs/green_trip/parquet/*'],
+hive_partition_uri_prefix = 'gs://tlc-data-bucket/outputs/green_trip/parquet',
 require_hive_partition_filter = false);
 ~~~~
 
 7.3 Run the following query to create a new BigQuery table for the FHVHV Trip data:
 
 ~~~~
-CREATE EXTERNAL TABLE mobilab-tech-task.dataset_tlc_nyc.fhvhv_trip
+CREATE EXTERNAL TABLE tlc-data.dataset_tlc_nyc.fhvhv_trip
 WITH PARTITION COLUMNS
 OPTIONS (
 format = 'PARQUET',
-uris = ['gs://mobilab-tech-task-bucket/outputs/fhvhv/parquet/*'],
-hive_partition_uri_prefix = 'gs://mobilab-tech-task-bucket/outputs/fhvhv/parquet',
+uris = ['gs://tlc-data-bucket/outputs/fhvhv/parquet/*'],
+hive_partition_uri_prefix = 'gs://tlc-data-bucket/outputs/fhvhv/parquet',
 require_hive_partition_filter = false);
 ~~~~
 

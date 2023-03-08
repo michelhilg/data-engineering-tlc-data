@@ -1,9 +1,11 @@
 # Future Steps
 
-In this markdown we will highlight some future steps to increase the pipeline robustness:
+In this markdown, I will present some extra ideas regarding future tasks to perform on the TLC Trip Record Data datasets.
 
-1. Solve the versioning issue, being able to write files in the Yellow Taxi Trip and FHV Trip dataset
-2. Import all the datasets as BigQuery tables
-3. Solve the versioning issues regarding Delta Lake, being able to write in the Delta Table format
-4. Fully connect the generated files with Google Cloud SQL to have row-oriented datasets
-5. Write dataflow jobs to automatically load and transform data
+## 1. Weather Conditions
+
+One good way to expand the pipeline to support the data analysis process will be by searching for new data regarding the weather in NYC City, ingesting this data, transforming it, and after load in the same database to be able to query together with the original trip data, making correlations.
+
+## 2. Machine Learning
+
+A machine learning model could be applied to the dataset, making correlations between general conditions, like months, holidays, days of the week. This model, at the end, could be able to predict interest informations, such as the total amount of ta specific trip, or the total duration of it.
