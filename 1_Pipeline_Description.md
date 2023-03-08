@@ -38,7 +38,7 @@ In this step, we select the Google Cloud Storage (GCS) tool, a web service from 
 
 We structure the data in folders by category, as follows:
 
-├── tlc-data
+├── tlc-data-task
 
 │   ├── yellow-taxi
 
@@ -54,7 +54,7 @@ We structure the data in folders by category, as follows:
 
 To perform the data transformation step we select the Google Dataproc on GCP, a fully managed and highly scalable service for running Apache Hadoop, Apache Spark, and 30+ open-source tools and frameworks. 
 
-The justification for this decision is based on the focus on Hadoop and Spark, great tools to implement in Big Data problems, as well as tools that have a great match with delta lake, one of the requirements from the Data Science team.
+The justification for this decision is based on the focus on Hadoop and Spark, great tools to implement in Big Data problems, as well as tools that have a great match with delta lake, new data-lake open-source provider.
 
 
 #### 2.3.2. Jupyter Notebook & PySpark
@@ -76,9 +76,9 @@ Each transformation method applied in each dataset is better described in the Ju
 
 ### 2.4. Load Data
 
-To load the data, writing from the Jupyter Notebooks, we must have to meet the Data Science team requirements:
+To load the data, writing from the Jupyter Notebooks, we defined two formats mostly used in the data engineering field:
 
-- Colum-oriented dataset in a Delta Lake format
+- Colum-oriented dataset (Google big query)
 - Row-oriented dataset
 
 ### 2.4.1 Output Folders - Google Cloud Storage (GCS)
@@ -89,21 +89,15 @@ Since we are running the transformation inside the GCP, this step is easily impl
 
 #### 2.4.2. Colum-oriented Format
 
-Running the PySpark inside the Dataproc cluster on GCP, we had problems with the Delta Lake installation, leading to issues when saving the data in a Delta Table format.
-
-To workaround this situation, we select a column-oriented database tool on GCP, Google BigQuery. Unfortunately, we also run with problems saving the FHV and the Yellow Trip dataset in this format, only achieving good results for the Green Trip and the FHVHV datasets.
+After running the PySpark inside the Dataproc cluster on GCP, we select a column-oriented database tool on GCP, Google BigQuery.
 
 #### 2.4.3. Google BigQuery
 
-With Google BigQuery, we achieve were able to import data from the Google Cloud Storage inside a Big Query Table, where the Data Science team could quickly run queries.
+With Google BigQuery, were able to import data from the Google Cloud Storage inside a Big Query Table, where the data science team could quickly run queries.
 
 #### 2.4.4. Row-oriented Format
 
-We face the same saving problem here, to save the output in a row-oriented database we select the `.csv` format after importing into a SQL DBMS, such as MySQL, PostgreSQL, or even Google Cloud SQL. But, unfortunately, a versioning problem only allowed us to save the Green Trip and the FHVHV datasets.
-
-#### 2.4.3. Google Cloud Storage & Google BigQuery
-
-Facing these challanges, we select the Goog,r, we achieve the result of automatically importing data from the Google Cloud Storage inside a Big Query Table, where the Data Science team could quickly run queries.
+To save the output in a row-oriented database we select the `.csv` format, this format sllows us to import the data into a SQL DBMS, such as MySQL, PostgreSQL, or even Google Cloud SQL.
 
 
 

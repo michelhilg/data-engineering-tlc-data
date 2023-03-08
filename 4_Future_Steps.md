@@ -1,6 +1,6 @@
 # Future Steps
 
-In this markdown, I will present some extra ideas regarding future tasks to perform on the TLC Trip Record Data datasets.
+In this markdown, we will present some extra ideas regarding future tasks to perform on the TLC Trip Record Data datasets.
 
 ## 1. Weather Conditions
 

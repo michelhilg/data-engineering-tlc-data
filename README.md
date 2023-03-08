@@ -6,6 +6,8 @@ This repository has the goal to present the pipeline documentation and code to a
 
 The challenge was to build a pipeline that automatically imports the TLC datasets from the web page [TLC NYC Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), after, transforms, and loads following best practices on data engineering field.
 
+To perform this task, a cloud data provider was selected. The ideia behind the cloud environment was bring the application more closely to the modern status of data engineering solutions.
+
 ## 2. What is the TLC data?
 
 The New York City Taxi and Limousine Commission (TLC), created in 1971, is the agency responsible for licensing and regulating New York City's Medallion (Yellow) taxi cabs, for-hire vehicles (community-based liveries, black cars and luxury limousines), commuter vans, and paratransit vehicles.
@@ -26,4 +28,4 @@ The repository contain the following deliverables:
 
 **Folders**
 1. Python Notebooks with pipeline transformation code
-2. Validation queries on the output datasets
+2. Validation queries
