@@ -1,8 +1,8 @@
-# Data Engineering - TLC Trip Record Data
+# Cloud Data Engineering - TLC Trip Record Data
 
 ## 1. Introduction
 
-This repository has the goal to present the pipeline documentation and code to a data engineering task performed on the TLC Trip Record Data from the New York city.
+This repository has the goal to present the pipeline documentation and code to a data engineering task performed on a cloud based platform for the TLC Trip Record Data.
 
 The challenge was to build a pipeline that automatically imports the TLC datasets from the web page [TLC NYC Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), after, transforms, and loads following best practices on data engineering field.
 
