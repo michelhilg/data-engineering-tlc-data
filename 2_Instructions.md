@@ -11,7 +11,7 @@ In this file, we will cover the instructions in order to set up the pipeline.
 ## Step 2. Set up a VM Instance Inside GCP
 
 2.1 Inside this Google Project, go to Compute Engine.
-2.2. Click on create an instance and fill the fields properly
+2.2. Click on create an instance and fill the fields properly.
 
 ![2](./images/VmInstance.PNG "VM Instance")
 
